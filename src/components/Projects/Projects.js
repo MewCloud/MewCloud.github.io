@@ -26,9 +26,9 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              link="https://github.com/soumyajit4419/Chatify"
+              title="Netbox"
+              description="NetBox is an IP address management (IPAM) and data center infrastructure management (DCIM) tool. Initially conceived by the network engineering team at DigitalOcean, NetBox was developed specifically to address the needs of network and infrastructure engineers. It is intended to function as a domain-specific source of truth for network operations."
+              link="https://github.com/ductnn/netbox"
             />
           </Col>
 
@@ -36,9 +36,9 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              link="https://github.com/soumyajit4419/Plant_AI"
+              title="Terraform quick start"
+              description="A quick start with terraform to build infrastructure on Cloud as AWS, Azue, GCP and deploy prod with CI/CD."
+              link="https://github.com/ductnn/terraform-til"
             />
           </Col>
 
@@ -46,9 +46,9 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              link="https://github.com/soumyajit4419/Editor.io"
+              title="WSN Fuzzy"
+              description="My personal research with my team that about effecient energy-aware routing scheme for multiple hop sensor networks"
+              link="https://github.com/ductnn/WSN_Fuzzy"
             />
           </Col>
 
