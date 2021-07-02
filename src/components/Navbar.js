@@ -94,7 +94,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://MewCloud.github.io/"
+                href="https://ductn.info"
                 target="_blank"
                 rel="noreferrer"
               >
