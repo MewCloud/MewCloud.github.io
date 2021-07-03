@@ -1,48 +1,48 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
+// import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
-  DiReact,
+  DiDjango,
   DiNodejs,
-  DiMongodb,
+  DiDatabase,
   DiPython,
-  DiGit,
+  DiGithub,
 } from "react-icons/di";
-import { SiPytorch, SiTensorflow, SiFirebase } from "react-icons/si";
+import { SiDocker, SiTerraform, SiKubernetes, SiAnsible, } from "react-icons/si";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
+        <DiPython />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <DiDatabase />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <DiNodejs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <DiDjango />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <SiAnsible />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
+        <SiDocker />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
+        <SiKubernetes />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiTensorflow />
+        <DiGithub />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
+        <SiTerraform />
       </Col>
     </Row>
   );
