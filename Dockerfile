@@ -4,9 +4,9 @@ LABEL author="ductn53@gmail.com"
 RUN mkdir -p /home/mewcloud
 WORKDIR /home/mewcloud
 
-COPY server ./server
+COPY node_server ./node_server
 COPY ecosystem.config.js ./
-RUN cd server && npm install
+RUN cd node_server && npm install
 COPY build ./build
 
 EXPOSE 3000

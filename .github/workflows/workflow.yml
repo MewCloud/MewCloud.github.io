@@ -32,12 +32,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
+      - name: Install and build
+        run: npm install && npm run build
+
       - name: Build and Push Docker Images
         uses: docker/build-push-action@v2
         id: docker_build
         with:
-          context: ./
-          file: ./Dockerfile
+          context: .
+          file: Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
@@ -55,4 +58,5 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           BUILD_SCRIPT: |
-            docker run -itd -p 3000:3000 ductn4/mewcloud
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
+            docker run -itd -p 3000:3000 d${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
