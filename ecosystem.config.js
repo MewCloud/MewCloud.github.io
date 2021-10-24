@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: 'mewcloud',
-            script: './server/index.js',
+            script: './node_server/index.js',
             ignore_watch: ['node_modules'],
             instances: 1,
             autorestart: true,
