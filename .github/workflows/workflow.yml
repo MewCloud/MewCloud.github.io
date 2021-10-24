@@ -58,4 +58,5 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           BUILD_SCRIPT: |
-            docker run -itd -p 3000:3000 ductn4/mewcloud
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
+            docker run -itd -p 3000:3000 d${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
