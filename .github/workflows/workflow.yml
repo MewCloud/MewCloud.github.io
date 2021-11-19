@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 jobs:
   build:
+    name: Build ⚙️
+
     runs-on: ubuntu-latest
 
     strategy:
@@ -37,7 +39,7 @@ jobs:
           npm install
           npm run build:dev
 
-      - name: Build and Push Docker Images
+      - name: Build and Push Docker Images 🐳
         uses: docker/build-push-action@v2
         id: docker_build
         with:
@@ -59,17 +61,14 @@ jobs:
           path: ./build
 
   deploy:
-    name: Deploy
+    name: Deploy 🚀
     needs: build
+
     runs-on: ubuntu-latest
+
     if: github.ref == 'refs/heads/master'
 
     steps:
-      - name: Deploy
-        run: |
-          cp node_server ./node_server
-          cd node_server && npm install
-
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
