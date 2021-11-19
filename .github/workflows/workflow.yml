@@ -37,6 +37,10 @@ jobs:
           npm install
           npm run build:dev
 
+      - name: Install rsync 📚
+        run: |
+          apt-get update && apt-get install -y rsync
+
       - name: Build and Push Docker Images
         uses: docker/build-push-action@v2
         id: docker_build
