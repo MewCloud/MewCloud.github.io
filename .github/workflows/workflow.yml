@@ -1,4 +1,4 @@
-name: Github Pages Deploy
+name: CI
 
 on: [push, pull_request]
 
@@ -33,7 +33,9 @@ jobs:
             ${{ runner.os }}-buildx-
 
       - name: Install and build
-        run: npm install && npm run build
+        run: |
+          npm install
+          npm run build:dev
 
       - name: Build and Push Docker Images
         uses: docker/build-push-action@v2
