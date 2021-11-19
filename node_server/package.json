@@ -1,7 +1,7 @@
 {
-  "name": "web-dashboard",
+  "name": "mewcloud",
   "version": "1.0.0",
-  "description": "config server web-dashboard",
+  "description": "config server mewcloud",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "nodejs",
     "react"
   ],
-  "author": "ductn1@vmodev.com",
+  "author": "ductn53@gmail.com",
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.2",
