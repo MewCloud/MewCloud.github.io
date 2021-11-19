@@ -37,10 +37,6 @@ jobs:
           npm install
           npm run build:dev
 
-      # - name: Install rsync 📚
-      #   run: |
-      #     apt-get update && apt-get install -y rsync
-
       - name: Build and Push Docker Images
         uses: docker/build-push-action@v2
         id: docker_build
@@ -63,6 +59,3 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
-          # BUILD_SCRIPT: |
-          #   docker pull ${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
-          #   docker run -itd -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/mewcloud
