@@ -8,7 +8,7 @@ module.exports = {
             autorestart: true,
             max_memory_restart: '1G',
             env: {
-                NODE_ENV: 'dev',
+                REACT_APP_STAGE: 'dev',
             },
         },
     ],
