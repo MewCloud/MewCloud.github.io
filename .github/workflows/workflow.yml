@@ -37,7 +37,7 @@ jobs:
       - name: Install and build
         run: |
           npm install
-          npm run build:dev
+          npm run build
 
       - name: Build and Push Docker Images 🐳
         uses: docker/build-push-action@v2
