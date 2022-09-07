@@ -5,11 +5,12 @@ LABEL author="ductnn"
 WORKDIR /mewcloud
 COPY package*.json ./
 RUN apk add --no-cache git \
-    && npm install --frozen-lockfile
+    && npm install --frozen-lockfile \
+    && npm cache verify
 
 
 # Build Image
-FROM node:16-alpine3.15 AS BUILD
+FROM ductn4/node:16-alpine3.15 AS BUILD
 LABEL author="ductnn"
 
 WORKDIR /mewcloud
@@ -18,9 +19,7 @@ COPY . .
 RUN apk add --no-cache git curl \
     && npm run build \
     && rm -rf node_modules \
-    && npm install --production --frozen-lockfile --ignore-scripts --prefer-offline \
-    && curl -sf https://gobinaries.com/tj/node-prune | sh -s -- -b /usr/local/bin \
-    && node-prune
+    && npm install --production --frozen-lockfile --ignore-scripts --prefer-offline
 
 
 # Build production
